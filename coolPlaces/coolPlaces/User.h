@@ -10,4 +10,20 @@
 
 @interface User : NSObject
 
+@property (strong,nonatomic) NSString *name;
+
+@property (strong,nonatomic) NSString *password;
+
+@property (strong,nonatomic) NSMutableArray *myPlaces;
+
+@property (strong,nonatomic) NSMutableArray *myComments;
+
+-(instancetype)initWithName: (NSString*) name
+                andPassword: (NSString*) password;
+
++(User*)userWithName: (NSString*) name
+         andPassword: (NSString*) password;
+
+
+
 @end

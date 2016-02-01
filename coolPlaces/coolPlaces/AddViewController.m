@@ -7,6 +7,7 @@
 //
 
 #import "AddViewController.h"
+#import "Place_initWithDicts.h"
 
 @interface AddViewController ()
 
@@ -16,7 +17,33 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    NSString *urlStr=@"";
+    
+    NSURL *url = [NSURL URLWithString:urlStr];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    //NSDictionary *body = @{@"name":@".."};
+    //NSData *bodyData = [NSJSONSerialization dataWithJSONObject:body options:NSJSONWritingPrettyPrinted error:nil];
+    Place *place = [Place placeWithName:@"somewhere"];
+    NSData *bodyData = [place toNSData];
+    
+    [request setHTTPMethod:@"POST"];
+        [request setHTTPBody:bodyData];
+    [request addValue:@"application/json"
+   forHTTPHeaderField:@"content-type"];
+    
+    [[[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        
+        if (error) {
+            NSLog(@"Error: %@",error);
+            return;
+        }
+        NSError *err;
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&err];
+        
+        NSLog(@"Data: %@",dict);
+    }]
+     resume];
 }
 
 - (void)didReceiveMemoryWarning {
