@@ -21,6 +21,10 @@
 		19A8956C1C5F55E700B0C10F /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A8956B1C5F55E700B0C10F /* User.m */; };
 		19A8956F1C5F55FB00B0C10F /* Place.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A8956E1C5F55FB00B0C10F /* Place.m */; };
 		19A895741C5FDDA500B0C10F /* HttpData.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A895731C5FDDA500B0C10F /* HttpData.m */; };
+		19E11FFF1C61047B009E272A /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E11FFE1C61047B009E272A /* LaunchView.swift */; };
+		19E120011C611121009E272A /* cliff.png in Resources */ = {isa = PBXBuildFile; fileRef = 19E120001C611121009E272A /* cliff.png */; };
+		19E22B6A1C6132F3009EDD7E /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 19E22B691C6132F3009EDD7E /* logo.png */; };
+		19E22B6C1C6139ED009EDD7E /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 19E22B6B1C6139ED009EDD7E /* background.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +53,11 @@
 		19A895701C5FD22000B0C10F /* Place_initWithDicts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Place_initWithDicts.h; sourceTree = "<group>"; };
 		19A895721C5FDDA500B0C10F /* HttpData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpData.h; sourceTree = "<group>"; };
 		19A895731C5FDDA500B0C10F /* HttpData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpData.m; sourceTree = "<group>"; };
+		19E11FFD1C61047A009E272A /* coolPlaces-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "coolPlaces-Bridging-Header.h"; sourceTree = "<group>"; };
+		19E11FFE1C61047B009E272A /* LaunchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		19E120001C611121009E272A /* cliff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cliff.png; sourceTree = "<group>"; };
+		19E22B691C6132F3009EDD7E /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		19E22B6B1C6139ED009EDD7E /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		2CD44D540E6C4D9D3687FEFF /* Pods-coolPlaces.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coolPlaces.debug.xcconfig"; path = "Pods/Target Support Files/Pods-coolPlaces/Pods-coolPlaces.debug.xcconfig"; sourceTree = "<group>"; };
 		AA3B4F93675A9B17ED6BC040 /* Pods-coolPlaces.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coolPlaces.release.xcconfig"; path = "Pods/Target Support Files/Pods-coolPlaces/Pods-coolPlaces.release.xcconfig"; sourceTree = "<group>"; };
 		B8BCEB772A20BD85C429A74B /* libPods-coolPlaces.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-coolPlaces.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +103,9 @@
 				19A895491C5F51CF00B0C10F /* AppDelegate.m */,
 				19A8954E1C5F51CF00B0C10F /* Main.storyboard */,
 				19A895511C5F51CF00B0C10F /* Assets.xcassets */,
+				19E22B6B1C6139ED009EDD7E /* background.png */,
+				19E22B691C6132F3009EDD7E /* logo.png */,
+				19E120001C611121009E272A /* cliff.png */,
 				19A895531C5F51CF00B0C10F /* LaunchScreen.storyboard */,
 				19A895561C5F51CF00B0C10F /* Info.plist */,
 				19A895451C5F51CF00B0C10F /* Supporting Files */,
@@ -122,6 +134,8 @@
 				19A895641C5F53E000B0C10F /* LaunchViewController.m */,
 				19A895661C5F53F300B0C10F /* RegisterViewController.h */,
 				19A895671C5F53F300B0C10F /* RegisterViewController.m */,
+				19E11FFE1C61047B009E272A /* LaunchView.swift */,
+				19E11FFD1C61047A009E272A /* coolPlaces-Bridging-Header.h */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -224,6 +238,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19E120011C611121009E272A /* cliff.png in Resources */,
+				19E22B6C1C6139ED009EDD7E /* background.png in Resources */,
+				19E22B6A1C6132F3009EDD7E /* logo.png in Resources */,
 				19A895551C5F51CF00B0C10F /* LaunchScreen.storyboard in Resources */,
 				19A895521C5F51CF00B0C10F /* Assets.xcassets in Resources */,
 				19A895501C5F51CF00B0C10F /* Main.storyboard in Resources */,
@@ -286,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19A8956C1C5F55E700B0C10F /* User.m in Sources */,
+				19E11FFF1C61047B009E272A /* LaunchView.swift in Sources */,
 				19A8954D1C5F51CF00B0C10F /* MainViewController.m in Sources */,
 				19A895621C5F53CC00B0C10F /* DetailsViewController.m in Sources */,
 				19A8954A1C5F51CF00B0C10F /* AppDelegate.m in Sources */,
@@ -407,10 +425,13 @@
 			baseConfigurationReference = 2CD44D540E6C4D9D3687FEFF /* Pods-coolPlaces.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = coolPlaces/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = z.coolPlaces;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "coolPlaces/coolPlaces-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -419,10 +440,12 @@
 			baseConfigurationReference = AA3B4F93675A9B17ED6BC040 /* Pods-coolPlaces.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = coolPlaces/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = z.coolPlaces;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "coolPlaces/coolPlaces-Bridging-Header.h";
 			};
 			name = Release;
 		};

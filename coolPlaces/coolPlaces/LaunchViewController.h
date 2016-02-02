@@ -10,4 +10,8 @@
 
 @interface LaunchViewController : UIViewController
 
+//@property (weak, nonatomic) IBOutlet UITextField *textFieldName;
+//
+//@property (weak, nonatomic) IBOutlet UITextField *textFieldPassword;
+
 @end

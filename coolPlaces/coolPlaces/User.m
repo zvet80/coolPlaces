@@ -35,4 +35,14 @@
     _name = name;
 }
 
++(void)load{
+    [self registerSubclass];
+}
+
++(NSString*) parseClassName{
+    return @"User";
+}
+
+
+
 @end

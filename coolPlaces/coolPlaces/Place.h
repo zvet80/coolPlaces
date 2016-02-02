@@ -7,12 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Parse/Parse.h>
 
-@interface Place : NSObject
+@interface Place : PFObject<PFSubclassing>
+
 
 @property (strong,nonatomic) NSString *placeName;
 
 @property (strong,nonatomic) NSString *description;
+
+@property (strong,nonatomic) NSString *location;
 
 @property (strong,nonatomic) NSString *image;
 
@@ -37,5 +41,8 @@
 +(Place*)placeWithName: (NSString*) name
            description: (NSString*) description
               andImage: (NSString*) image;
+
++(NSString*) parseClassName;
+
 
 @end

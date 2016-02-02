@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Parse/Parse.h>
 
-@interface User : NSObject
+@interface User : PFObject<PFSubclassing>
 
 @property (strong,nonatomic) NSString *name;
 
@@ -24,6 +25,6 @@
 +(User*)userWithName: (NSString*) name
          andPassword: (NSString*) password;
 
-
++(NSString*) parseClassName;
 
 @end

@@ -46,6 +46,15 @@
     return [[Place alloc] initWithName:name description:description andImage:image];
 }
 
++(void)load{
+    [self registerSubclass];
+}
+
++(NSString*) parseClassName{
+    return @"Place";
+}
+
+
 +(Place*) placeWithDict: (NSDictionary*) dict{
     return [Place placeWithName: [dict objectForKey:@"name"]
                  andDescription:[dict objectForKey:@"description"]];
