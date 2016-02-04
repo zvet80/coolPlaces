@@ -10,6 +10,8 @@
 #import "Place.h"
 #import "Place_initWithDicts.h"
 #import "HttpData.h"
+#import <Parse/Parse.h>
+#import "AddViewController.h"
 
 @interface MainViewController ()
 
@@ -20,13 +22,35 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HttpData *httpData = [[HttpData alloc] init];
-    [httpData getAt:@"http://" withCompletionHandler:^(NSDictionary * _Nullable dict) {
-        Place *place = [Place placeWithDict:dict];
-    }];
+    UIBarButtonItem *addBarButton = [[UIBarButtonItem alloc]
+                                     initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                     target:self
+                                     action:@selector(showAdd)];
+    self.navigationItem.rightBarButtonItem = addBarButton;
+    
+        
+//    NSMutableArray *ratings =[NSMutableArray arrayWithObjects:@"1",@"2",nil];
+//    NSMutableArray *comments =[NSMutableArray arrayWithObjects:@"nice",@"cool",nil];
+    
+    
+    
+    //    HttpData *httpData = [[HttpData alloc] init];
+    //    [httpData getAt:@"http://" withCompletionHandler:^(NSDictionary * _Nullable dict) {
+    //        Place *place = [Place placeWithDict:dict];
+    //    }];
     //[self getAll];
     
     
+}
+
+-(IBAction)unwind:(UIStoryboardSegue*)sender{
+    
+}
+
+-(void)showAdd{
+    NSString *storyBoardId = @"addScene";
+    AddViewController *addVC = [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
+    [self.navigationController pushViewController:addVC animated:YES];
 }
 
 -(void) getAll{
@@ -37,25 +61,25 @@
     
     [[[NSURLSession sharedSession] dataTaskWithRequest:request
                                      completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        
-        if (error) {
-            NSLog(@"Error: %@",error);
-            return;
-        }
-        NSError *err;
-        NSDictionary *dataDict = [NSJSONSerialization JSONObjectWithData:data
-                                                                 options:NSJSONReadingAllowFragments
-                                                                   error:&err];
                                          
-        NSArray *placesDicts = [dataDict objectForKey:@"result"];
-        NSMutableArray *places= [NSMutableArray array];
+                                         if (error) {
+                                             NSLog(@"Error: %@",error);
+                                             return;
+                                         }
+                                         NSError *err;
+                                         NSDictionary *dataDict = [NSJSONSerialization JSONObjectWithData:data
+                                                                                                  options:NSJSONReadingAllowFragments
+                                                                                                    error:&err];
+                                         
+                                         NSArray *placesDicts = [dataDict objectForKey:@"result"];
+                                         NSMutableArray *places= [NSMutableArray array];
                                          for (int i=0; i<placesDicts.count; i++) {
                                              NSDictionary *placeDict = [placesDicts objectAtIndex:i];
                                              Place *place = [Place placeWithDict: placeDict];
                                          }
-        
-        NSLog(@"Data: %@",dataDict);
-    }]
+                                         
+                                         NSLog(@"Data: %@",dataDict);
+                                     }]
      resume];
 }
 

@@ -3,3 +3,4 @@
 //
 
 #import "RegisterViewController.h"
+#import <Parse/Parse.h>

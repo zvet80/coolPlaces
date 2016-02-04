@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <Parse/Parse.h>
 
-@interface User : PFObject<PFSubclassing>
+@interface User:NSObject
 
-@property (strong,nonatomic) NSString *name;
+@property (strong,nonatomic) NSString *username;
 
 @property (strong,nonatomic) NSString *password;
 
@@ -19,10 +19,10 @@
 
 @property (strong,nonatomic) NSMutableArray *myComments;
 
--(instancetype)initWithName: (NSString*) name
+-(instancetype)initWithName: (NSString*) username
                 andPassword: (NSString*) password;
 
-+(User*)userWithName: (NSString*) name
++(User*)userWithName: (NSString*) username
          andPassword: (NSString*) password;
 
 +(NSString*) parseClassName;

@@ -10,11 +10,14 @@
 #import "coolPlaces-Bridging-Header.h"
 
 @class RegisterViewController;
+
 @interface RegisterViewController : UIViewController
+
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet UITextField *confirmTextField;
+- (IBAction)registerTab:(UIButton *)sender;
 
--(void)prova:(RegisterViewController*) registerViewController;
+//-(void)prova:(RegisterViewController*) registerViewController;
 
 @end

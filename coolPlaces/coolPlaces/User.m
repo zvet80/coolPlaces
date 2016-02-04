@@ -10,11 +10,14 @@
 
 @implementation User
 
-@synthesize name = _name;
+@synthesize username = _username;
+@synthesize password = _password;
+@synthesize myPlaces = _myPlaces;
+@synthesize myComments = _myComments;
 
--(instancetype) initWithName:(NSString *)name andPassword:(NSString *)password{
+-(instancetype) initWithName:(NSString *)username andPassword:(NSString *)password{
     if (self=[super init]) {
-        self.name = name;
+        self.username = username;
         self.password = password;
         //self.myPlaces = [NSMutableArray arrayWithArray:myPlaces];
     }
@@ -22,25 +25,42 @@
     return self;
 }
 
-+(User*)userWithName:(NSString *)name andPassword:(NSString *)password{
-    return [[User alloc] initWithName:name andPassword:password];
++(User*)userWithName:(NSString *)username andPassword:(NSString *)password{
+    return [[User alloc] initWithName:username andPassword:password];
 }
 
--(NSString *)name{
-    return _name;
+-(NSString *)username{
+    return _username;
 }
 
--(void)setName:(NSString *)name{
+-(void)setName:(NSString *)username{
     //validation
-    _name = name;
+    _username = username;
 }
 
-+(void)load{
-    [self registerSubclass];
+-(NSString *)password{
+    return _password;
 }
 
-+(NSString*) parseClassName{
-    return @"User";
+-(void)setPassword:(NSString *)password{
+    //validation
+    _password = password;
+}
+
+-(NSMutableArray*)myPlaces{
+    return _myPlaces;
+}
+
+-(void)setMyPlaces:(NSMutableArray *)myPlaces{
+    _myPlaces=myPlaces;
+}
+
+-(NSMutableArray*)myComments{
+    return _myComments;
+}
+
+-(void)setMyComments:(NSMutableArray *)myComments{
+    _myComments=myComments;
 }
 
 
