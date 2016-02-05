@@ -7,13 +7,12 @@
 //
 
 
-import UIKit
+//import UIKit
 
  class LaunchView: UIViewController {
     
-    
     @IBOutlet weak var usernameTextView: UITextField!
-
+    
     @IBOutlet weak var passwordTextView: UITextField!
     
     override func viewDidLoad(){
@@ -41,8 +40,7 @@ import UIKit
                 Validator.showMessageWithTitle("Invalid", andMessage: "Invalid username or password!")
             }
         })
-
-    }
+    }    
     
     @IBAction func newUserButtonTap(sender: UIButton) {
         let storyBoard: UIStoryboard=UIStoryboard(name:"Main",bundle:nil)

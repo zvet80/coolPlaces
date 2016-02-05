@@ -10,11 +10,11 @@
 
 @implementation Validator
 
-int const MIN_USERNAME_LENGTH = 3;
+int const MIN_USERNAME_LENGTH = 2;
 
 +(BOOL) validateUsername:(NSString*) username{
     if (username.length<MIN_USERNAME_LENGTH){
-        [Validator showMessageWithTitle:@"Invalid!" andMessage:@"Username must be longer than 3 letters!"];
+        [Validator showMessageWithTitle:@"Invalid!" andMessage:[NSString stringWithFormat:@"Username must be longer than %d letters!",MIN_USERNAME_LENGTH]];
                 return false;
     }
     
@@ -23,7 +23,7 @@ int const MIN_USERNAME_LENGTH = 3;
     
 +(BOOL) validatePassword:(NSString*) password{
     if (password.length<MIN_USERNAME_LENGTH){
-        [Validator showMessageWithTitle:@"Invalid!" andMessage:@"Password must be longer than 3 letters!"];
+        [Validator showMessageWithTitle:@"Invalid!" andMessage:[NSString stringWithFormat:@"Password must be longer than %d letters!",MIN_USERNAME_LENGTH]];
         return false;
     }
     
