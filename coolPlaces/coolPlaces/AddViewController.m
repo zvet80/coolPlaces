@@ -8,6 +8,7 @@
 
 #import "AddViewController.h"
 #import "Place_initWithDicts.h"
+#import "Validator.h"
 
 @interface AddViewController ()
 
@@ -22,7 +23,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)onButtonTapSave:(id)sender {
@@ -31,7 +31,8 @@
     NSString* location = self.textFieldLocation.text;
     NSData* imageToSave = UIImageJPEGRepresentation(self.imageView.image,0.5f);
     if (placeName==nil|| description==nil || location==nil || imageToSave==nil) {
-        NSLog(@"All fields required");
+        [Validator showMessageWithTitle:@"Missing data" andMessage:@"All fields required"];
+        
         return;
     }
     
@@ -39,7 +40,7 @@
 
     Place *place = [Place placeWithName:placeName description:description location:location image:imageFile ratings:nil andComments:nil];
     [place saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
-        NSLog(@"success");
+        [Validator showMessageWithTitle:@"Success" andMessage:@"Your coolPlace is saved!"];
     }];
     
 }

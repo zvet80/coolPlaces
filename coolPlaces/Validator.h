@@ -7,10 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface Validator : NSObject
+extern int const MIN_USERNAME_LENGTH;
 
--(void) validateUsername;
--(void) validatePassword;
--(void) showMessageWithTitle:(NSString*) title andMessage:(NSString*) message;
++(BOOL) validateUsername:(NSString*) username;
+
++(BOOL) validatePassword:(NSString*) password;
+
++(BOOL) validatePassword:(NSString*) password withConfirmedPassword:(NSString*) confirmedPassword;
+
++(void) showMessageWithTitle:(NSString*) title andMessage:(NSString*) message;
 @end

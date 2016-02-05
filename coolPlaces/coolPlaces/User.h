@@ -25,6 +25,6 @@
 +(User*)userWithName: (NSString*) username
          andPassword: (NSString*) password;
 
-+(NSString*) parseClassName;
+//+(NSString*) parseClassName;
 
 @end

@@ -10,10 +10,10 @@
 
 @interface HttpData : NSObject
 
--(void) getAt: (NSString*) urlStr
-withCompletionHandler:(void(^)(NSDictionary * __nullable dict))completionHandler;
-
--(void) postBody: (NSData*) body
-          at:(NSString*) url;
+//-(void) getAt: (NSString*) urlStr
+//withCompletionHandler:(void(^)(NSDictionary * __nullable dict))completionHandler;
+//
+//-(void) postBody: (NSData*) body
+//          at:(NSString*) url;
 
 @end

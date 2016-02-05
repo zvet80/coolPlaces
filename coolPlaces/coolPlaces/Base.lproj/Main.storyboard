@@ -9,7 +9,7 @@
         <!--Launch View-->
         <scene sceneID="Kun-g1-Wno">
             <objects>
-                <viewController id="Wvm-Q3-koc" customClass="LaunchView" customModule="coolPlaces" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Launch" id="Wvm-Q3-koc" customClass="LaunchView" customModule="coolPlaces" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Bu2-gN-1RZ"/>
                         <viewControllerLayoutGuide type="bottom" id="xZR-tD-bvr"/>
@@ -76,6 +76,7 @@
                                 </state>
                                 <connections>
                                     <action selector="loginTap:" destination="Wvm-Q3-koc" eventType="touchUpInside" id="ohD-gD-8hB"/>
+                                    <segue destination="2wy-pg-j81" kind="show" id="xfu-Cf-Wvl"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -107,6 +108,7 @@
                             <constraint firstItem="fVF-pK-ZGS" firstAttribute="trailing" secondItem="7NI-nN-u1Z" secondAttribute="trailing" id="waL-GX-KTg"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="I4L-bo-cK7"/>
                     <connections>
                         <outlet property="passwordTextView" destination="7NI-nN-u1Z" id="xb6-B1-Zxn"/>
                         <outlet property="usernameTextView" destination="fVF-pK-ZGS" id="Hol-ov-pUa"/>
@@ -114,9 +116,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nfk-64-fHa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="312" y="341"/>
+            <point key="canvasLocation" x="1124" y="341"/>
         </scene>
-        <!--List with cool places-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="Main" id="BYZ-38-t0r" customClass="MainViewController" sceneMemberID="viewController">
@@ -242,14 +244,23 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="List with cool places" prompt="Add a cool place" id="Ojf-lP-Y9F">
-                        <barButtonItem key="backBarButtonItem" title="Logout" id="AA3-WG-2Dt"/>
+                    <navigationItem key="navigationItem" id="Ojf-lP-Y9F">
+                        <barButtonItem key="leftBarButtonItem" systemItem="reply" id="ydo-Vl-0NH">
+                            <connections>
+                                <action selector="logout:" destination="BYZ-38-t0r" id="kU4-dx-4zd"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Bxp-dm-w85">
+                            <connections>
+                                <segue destination="8Xa-r5-t0v" kind="show" id="aPD-bO-6ZO"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="980" y="404"/>
+            <point key="canvasLocation" x="1756" y="356"/>
         </scene>
         <!--Add View Controller-->
         <scene sceneID="zOA-ma-TSF">
@@ -441,7 +452,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z5V-wi-RUn" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="rRg-E1-BdB" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1713" y="388"/>
+            <point key="canvasLocation" x="2437" y="364"/>
         </scene>
         <!--Details View Controller-->
         <scene sceneID="RCK-3i-MYQ">
@@ -563,7 +574,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mee-ue-Nt0">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mee-ue-Nt0">
                                 <rect key="frame" x="173" y="208" width="97" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="97" id="aoH-Xl-lWF"/>
@@ -571,41 +582,41 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Sq-VR-Hhj">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Sq-VR-Hhj">
                                 <rect key="frame" x="20" y="211" width="83" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nBF-9S-jtD">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nBF-9S-jtD">
                                 <rect key="frame" x="173" y="261" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHX-y6-FJx">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHX-y6-FJx">
                                 <rect key="frame" x="20" y="270" width="83" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yHF-Dy-Xes">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yHF-Dy-Xes">
                                 <rect key="frame" x="173" y="314" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Confirm Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1lj-wc-dBQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1lj-wc-dBQ">
                                 <rect key="frame" x="20" y="317" width="140" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tsN-wn-JK3">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tsN-wn-JK3">
                                 <rect key="frame" x="20" y="0.0" width="389" height="128"/>
                                 <connections>
                                     <segue destination="x2p-WG-uPC" kind="embed" id="44e-Zq-AE4"/>
                                 </connections>
                             </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWm-vn-4py">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWm-vn-4py">
                                 <rect key="frame" x="102" y="401" width="121" height="30"/>
                                 <color key="backgroundColor" red="0.16078431369999999" green="0.1960784314" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -700,22 +711,22 @@
             <point key="canvasLocation" x="927" y="-392"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="yi7-r2-fPz">
+        <scene sceneID="3lo-K4-q2u">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CgC-eb-gde" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dzj-FT-gCN" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigationController" automaticallyAdjustsScrollViewInsets="NO" id="2wy-pg-j81" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8K6-rZ-aHJ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aqo-da-VLw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Xol-Yg-oCh"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Xfr-a8-1Id"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SL4-7s-RMV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="292" y="-560"/>
+            <point key="canvasLocation" x="1476" y="-436"/>
         </scene>
     </scenes>
     <resources>
@@ -727,5 +738,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="rbo-lQ-c3v"/>
+        <segue reference="dgj-jc-G6U"/>
     </inferredMetricsTieBreakers>
 </document>

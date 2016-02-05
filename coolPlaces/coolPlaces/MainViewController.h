@@ -10,6 +10,7 @@
 
 @interface MainViewController : UIViewController
 
+- (IBAction)logout:(UIBarButtonItem *)sender;
 
 @end
 

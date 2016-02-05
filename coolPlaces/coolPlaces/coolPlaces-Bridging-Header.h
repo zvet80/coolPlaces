@@ -4,3 +4,4 @@
 
 #import "RegisterViewController.h"
 #import <Parse/Parse.h>
+#import "Validator.h"
