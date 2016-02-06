@@ -9,12 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface AddViewController : UIViewController<UIImagePickerControllerDelegate,UINavigationControllerDelegate>{
-    UIImagePickerController *picker;
-    UIImagePickerController *picker2;
+    UIImagePickerController *cameraPicker;
+    UIImagePickerController *filePicker;
     UIImage * image;
 }
-
-
 
 @property (weak, nonatomic) IBOutlet UITextField *textFieldPlaceName;
 @property (weak, nonatomic) IBOutlet UITextView *textFieldDescription;
@@ -25,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 - (IBAction)takePhoto:(UIButton *)sender;
+
 - (IBAction)loadPhoto:(UIButton *)sender;
 
 - (IBAction)onButtonTapSave:(id)sender;

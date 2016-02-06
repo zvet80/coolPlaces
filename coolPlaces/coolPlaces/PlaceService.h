@@ -11,9 +11,9 @@
 
 @interface PlaceService : NSObject
 
-@property (strong, nonatomic) NSMutableArray* result;
+extern NSMutableArray* places;
 
--(NSMutableArray*) getAllPlaces;
++(NSMutableArray*) getAllPlaces;
 
 -(NSMutableArray*) getAllPlacesOrderedByRatingDesc;
 

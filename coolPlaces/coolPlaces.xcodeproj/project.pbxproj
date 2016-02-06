@@ -11,6 +11,11 @@
 		192BA6FB1C638CEC00D8242D /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 192BA6FA1C638CEC00D8242D /* camera.png */; };
 		192BA6FF1C63923900D8242D /* upload1.png in Resources */ = {isa = PBXBuildFile; fileRef = 192BA6FE1C63923900D8242D /* upload1.png */; };
 		192BA7041C63D38B00D8242D /* Validator.m in Sources */ = {isa = PBXBuildFile; fileRef = 192BA7031C63D38B00D8242D /* Validator.m */; };
+		193775F31C664694005F6303 /* myCellCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 193775F11C664694005F6303 /* myCellCollectionViewCell.m */; };
+		193775F41C664694005F6303 /* myCellCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 193775F21C664694005F6303 /* myCellCollectionViewCell.xib */; };
+		193775FB1C665744005F6303 /* MainCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 193775F91C665744005F6303 /* MainCollectionViewController.m */; };
+		193775FC1C665744005F6303 /* MainCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 193775FA1C665744005F6303 /* MainCollectionViewController.xib */; };
+		193775FF1C6659D4005F6303 /* MainCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 193775FE1C6659D4005F6303 /* MainCollectionView.m */; };
 		19A895471C5F51CF00B0C10F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A895461C5F51CF00B0C10F /* main.m */; };
 		19A8954A1C5F51CF00B0C10F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A895491C5F51CF00B0C10F /* AppDelegate.m */; };
 		19A8954D1C5F51CF00B0C10F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A8954C1C5F51CF00B0C10F /* MainViewController.m */; };
@@ -39,6 +44,14 @@
 		192BA6FE1C63923900D8242D /* upload1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = upload1.png; sourceTree = "<group>"; };
 		192BA7021C63D38B00D8242D /* Validator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Validator.h; sourceTree = "<group>"; };
 		192BA7031C63D38B00D8242D /* Validator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Validator.m; sourceTree = "<group>"; };
+		193775F01C664694005F6303 /* myCellCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myCellCollectionViewCell.h; sourceTree = "<group>"; };
+		193775F11C664694005F6303 /* myCellCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myCellCollectionViewCell.m; sourceTree = "<group>"; };
+		193775F21C664694005F6303 /* myCellCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = myCellCollectionViewCell.xib; sourceTree = "<group>"; };
+		193775F81C665744005F6303 /* MainCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCollectionViewController.h; sourceTree = "<group>"; };
+		193775F91C665744005F6303 /* MainCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainCollectionViewController.m; sourceTree = "<group>"; };
+		193775FA1C665744005F6303 /* MainCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainCollectionViewController.xib; sourceTree = "<group>"; };
+		193775FD1C6659D4005F6303 /* MainCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCollectionView.h; sourceTree = "<group>"; };
+		193775FE1C6659D4005F6303 /* MainCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainCollectionView.m; sourceTree = "<group>"; };
 		19A895421C5F51CF00B0C10F /* coolPlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = coolPlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19A895461C5F51CF00B0C10F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		19A895481C5F51CF00B0C10F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -201,6 +214,14 @@
 				19FE8C1D1C64A8EF00F7A995 /* CustomCollectionViewCell.xib */,
 				19FE8C1F1C64AC1900F7A995 /* CustomCollectionViewCell.h */,
 				19FE8C201C64AC1900F7A995 /* CustomCollectionViewCell.m */,
+				193775F01C664694005F6303 /* myCellCollectionViewCell.h */,
+				193775F11C664694005F6303 /* myCellCollectionViewCell.m */,
+				193775F21C664694005F6303 /* myCellCollectionViewCell.xib */,
+				193775F81C665744005F6303 /* MainCollectionViewController.h */,
+				193775F91C665744005F6303 /* MainCollectionViewController.m */,
+				193775FA1C665744005F6303 /* MainCollectionViewController.xib */,
+				193775FD1C6659D4005F6303 /* MainCollectionView.h */,
+				193775FE1C6659D4005F6303 /* MainCollectionView.m */,
 			);
 			name = Views;
 			path = ..;
@@ -285,6 +306,8 @@
 			files = (
 				19E120011C611121009E272A /* cliff.png in Resources */,
 				19E22B6C1C6139ED009EDD7E /* background.png in Resources */,
+				193775FC1C665744005F6303 /* MainCollectionViewController.xib in Resources */,
+				193775F41C664694005F6303 /* myCellCollectionViewCell.xib in Resources */,
 				19E22B6A1C6132F3009EDD7E /* logo.png in Resources */,
 				19FE8C1E1C64A8EF00F7A995 /* CustomCollectionViewCell.xib in Resources */,
 				19A895551C5F51CF00B0C10F /* LaunchScreen.storyboard in Resources */,
@@ -351,11 +374,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				193775FF1C6659D4005F6303 /* MainCollectionView.m in Sources */,
 				19A8956C1C5F55E700B0C10F /* User.m in Sources */,
 				19FE8C271C64B90900F7A995 /* UserService.m in Sources */,
 				19E11FFF1C61047B009E272A /* LaunchView.swift in Sources */,
 				19A8954D1C5F51CF00B0C10F /* MainViewController.m in Sources */,
 				19FE8C211C64AC1900F7A995 /* CustomCollectionViewCell.m in Sources */,
+				193775FB1C665744005F6303 /* MainCollectionViewController.m in Sources */,
+				193775F31C664694005F6303 /* myCellCollectionViewCell.m in Sources */,
 				19A895621C5F53CC00B0C10F /* DetailsViewController.m in Sources */,
 				19A8954A1C5F51CF00B0C10F /* AppDelegate.m in Sources */,
 				19A8955F1C5F53B900B0C10F /* AddViewController.m in Sources */,

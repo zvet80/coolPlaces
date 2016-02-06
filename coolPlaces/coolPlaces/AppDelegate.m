@@ -9,13 +9,13 @@
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
 #include "Place.h"
+#import "PlaceService.h"
 
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
-
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
@@ -25,7 +25,7 @@
     [Parse setApplicationId:@"laM2O42kKHRui4IdqXubuTPVIAyGXja96ifAqjBe"
                   clientKey:@"O5rraYoXeAqYEJpm2UtN2rZd5C7IRGktQBVyTWUU"];
     
-    
+    [PlaceService getAllPlaces];
     return YES;
 }
 

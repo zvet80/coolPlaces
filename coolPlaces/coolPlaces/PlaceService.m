@@ -9,24 +9,24 @@
 #import "PlaceService.h"
 
 @implementation PlaceService
-
--(NSMutableArray*) getAllPlaces{
-    //NSMutableArray *result;
+NSMutableArray *places;
++(NSMutableArray*) getAllPlaces{
+    
+    places = [[NSMutableArray alloc] init];
     PFQuery *query = [PFQuery queryWithClassName:[Place parseClassName]];
+    [query orderByDescending:@"createdAt"];
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
-//        [objects enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-//            Place *place = obj;
-//        }];
-        //return objects;
-        //[result addObjectsFromArray:objects];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            self.result=[[NSMutableArray alloc]initWithArray:objects copyItems:YES];
-        });
-        
-        //return result;
+                [objects enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                    Place *place = obj;
+                    [places addObject:place];
+                }];
+
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            places =[[NSMutableArray alloc]initWithArray:objects copyItems:YES];
+//        });
     }];
     
-    return self.result;
+    return places;
 }
 
 -(NSMutableArray*) getAllPlacesOrderedByRatingDesc{
