@@ -16,6 +16,9 @@
 		193775FB1C665744005F6303 /* MainCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 193775F91C665744005F6303 /* MainCollectionViewController.m */; };
 		193775FC1C665744005F6303 /* MainCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 193775FA1C665744005F6303 /* MainCollectionViewController.xib */; };
 		193775FF1C6659D4005F6303 /* MainCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 193775FE1C6659D4005F6303 /* MainCollectionView.m */; };
+		193776021C667D24005F6303 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 193776011C667D24005F6303 /* MapViewController.m */; };
+		193776051C66927B005F6303 /* LocationProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 193776041C66927B005F6303 /* LocationProvider.m */; };
+		1937760B1C669E4B005F6303 /* Compass1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1937760A1C669E4B005F6303 /* Compass1.png */; };
 		19A895471C5F51CF00B0C10F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A895461C5F51CF00B0C10F /* main.m */; };
 		19A8954A1C5F51CF00B0C10F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A895491C5F51CF00B0C10F /* AppDelegate.m */; };
 		19A8954D1C5F51CF00B0C10F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A8954C1C5F51CF00B0C10F /* MainViewController.m */; };
@@ -52,6 +55,11 @@
 		193775FA1C665744005F6303 /* MainCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainCollectionViewController.xib; sourceTree = "<group>"; };
 		193775FD1C6659D4005F6303 /* MainCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCollectionView.h; sourceTree = "<group>"; };
 		193775FE1C6659D4005F6303 /* MainCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainCollectionView.m; sourceTree = "<group>"; };
+		193776001C667D24005F6303 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		193776011C667D24005F6303 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		193776031C66927B005F6303 /* LocationProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationProvider.h; sourceTree = "<group>"; };
+		193776041C66927B005F6303 /* LocationProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationProvider.m; sourceTree = "<group>"; };
+		1937760A1C669E4B005F6303 /* Compass1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Compass1.png; sourceTree = "<group>"; };
 		19A895421C5F51CF00B0C10F /* coolPlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = coolPlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19A895461C5F51CF00B0C10F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		19A895481C5F51CF00B0C10F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -110,6 +118,8 @@
 			children = (
 				192BA7021C63D38B00D8242D /* Validator.h */,
 				192BA7031C63D38B00D8242D /* Validator.m */,
+				193776031C66927B005F6303 /* LocationProvider.h */,
+				193776041C66927B005F6303 /* LocationProvider.m */,
 			);
 			name = Common;
 			path = ..;
@@ -145,6 +155,7 @@
 				19A895491C5F51CF00B0C10F /* AppDelegate.m */,
 				19A8954E1C5F51CF00B0C10F /* Main.storyboard */,
 				19A895511C5F51CF00B0C10F /* Assets.xcassets */,
+				1937760A1C669E4B005F6303 /* Compass1.png */,
 				192BA6FE1C63923900D8242D /* upload1.png */,
 				192BA6FA1C638CEC00D8242D /* camera.png */,
 				19E54A731C627B3600534E47 /* logo1.png */,
@@ -179,6 +190,8 @@
 				19A895671C5F53F300B0C10F /* RegisterViewController.m */,
 				19E11FFE1C61047B009E272A /* LaunchView.swift */,
 				19E11FFD1C61047A009E272A /* coolPlaces-Bridging-Header.h */,
+				193776001C667D24005F6303 /* MapViewController.h */,
+				193776011C667D24005F6303 /* MapViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -306,6 +319,7 @@
 			files = (
 				19E120011C611121009E272A /* cliff.png in Resources */,
 				19E22B6C1C6139ED009EDD7E /* background.png in Resources */,
+				1937760B1C669E4B005F6303 /* Compass1.png in Resources */,
 				193775FC1C665744005F6303 /* MainCollectionViewController.xib in Resources */,
 				193775F41C664694005F6303 /* myCellCollectionViewCell.xib in Resources */,
 				19E22B6A1C6132F3009EDD7E /* logo.png in Resources */,
@@ -377,6 +391,7 @@
 				193775FF1C6659D4005F6303 /* MainCollectionView.m in Sources */,
 				19A8956C1C5F55E700B0C10F /* User.m in Sources */,
 				19FE8C271C64B90900F7A995 /* UserService.m in Sources */,
+				193776021C667D24005F6303 /* MapViewController.m in Sources */,
 				19E11FFF1C61047B009E272A /* LaunchView.swift in Sources */,
 				19A8954D1C5F51CF00B0C10F /* MainViewController.m in Sources */,
 				19FE8C211C64AC1900F7A995 /* CustomCollectionViewCell.m in Sources */,
@@ -387,6 +402,7 @@
 				19A8955F1C5F53B900B0C10F /* AddViewController.m in Sources */,
 				19A895681C5F53F300B0C10F /* RegisterViewController.m in Sources */,
 				19A8956F1C5F55FB00B0C10F /* Place.m in Sources */,
+				193776051C66927B005F6303 /* LocationProvider.m in Sources */,
 				19A895471C5F51CF00B0C10F /* main.m in Sources */,
 				192BA7041C63D38B00D8242D /* Validator.m in Sources */,
 				19A895741C5FDDA500B0C10F /* HttpData.m in Sources */,

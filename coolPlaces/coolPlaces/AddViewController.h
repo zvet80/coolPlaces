@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *buttonSavePlace;
 
 @property (weak, nonatomic) IBOutlet UIButton *takePicButton;
+@property (weak, nonatomic) IBOutlet UIButton *compassButton;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 - (IBAction)takePhoto:(UIButton *)sender;
@@ -27,5 +28,7 @@
 - (IBAction)loadPhoto:(UIButton *)sender;
 
 - (IBAction)onButtonTapSave:(id)sender;
+
+- (IBAction)takeLocation:(UIButton *)sender;
 
 @end

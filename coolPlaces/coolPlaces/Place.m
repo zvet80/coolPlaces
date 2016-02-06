@@ -32,7 +32,7 @@
     return [[Place alloc] initWithName:name description:description location:nil image:nil ratings:nil andComments:nil];
 }
 
--(instancetype)initWithName:(NSString *)name description:(NSString *)description location:(NSString *)location image:(PFFile *)image ratings:(NSMutableArray *)ratings andComments:(NSMutableArray *)comments{
+-(instancetype)initWithName:(NSString *)name description:(NSString *)description location:(PFGeoPoint *)location image:(PFFile *)image ratings:(NSMutableArray *)ratings andComments:(NSMutableArray *)comments{
     if (self=[super init]) {
         self.placeName = name;
         self.placeDescription=description;
@@ -54,7 +54,7 @@
     return [[Place alloc] initWithName:name andDescription:description];
 }
 
-+(Place*)placeWithName:(NSString *)name description:(NSString *)description location:(NSString *)location image:(PFFile *)image ratings:(NSMutableArray *)ratings andComments:(NSMutableArray *)comments{
++(Place*)placeWithName:(NSString *)name description:(NSString *)description location:(PFGeoPoint *)location image:(PFFile *)image ratings:(NSMutableArray *)ratings andComments:(NSMutableArray *)comments{
     return [[Place alloc] initWithName:name description:description location:location image:image ratings:ratings andComments:comments];
 }
 

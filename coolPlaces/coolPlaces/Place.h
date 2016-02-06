@@ -16,7 +16,7 @@
 
 @property (strong,nonatomic) NSString *placeDescription;
 
-@property (strong,nonatomic) NSString *location;
+@property (strong,nonatomic) PFGeoPoint *location;
 
 @property (strong,nonatomic) PFFile *image;
 
@@ -31,7 +31,7 @@
 
 -(instancetype)initWithName: (NSString*) name
                 description: (NSString*) description
-                   location:(NSString*) location
+                   location:(PFGeoPoint*) location
                    image: (PFFile*) image
                    ratings:(NSMutableArray*)ratings
                 andComments:(NSMutableArray*)comments;
@@ -43,7 +43,7 @@
 
 +(Place*)placeWithName: (NSString*) name
                 description: (NSString*) description
-                   location:(NSString*) location
+                   location:(PFGeoPoint*) location
                       image: (PFFile*) image
                    ratings:(NSMutableArray*)ratings
                 andComments:(NSMutableArray*)comments;

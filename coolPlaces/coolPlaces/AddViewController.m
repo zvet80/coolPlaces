@@ -10,8 +10,11 @@
 #import "PlaceService.h"
 #import "MainViewController.h"
 #import "Validator.h"
+#import "LocationProvider.h"
 
-@interface AddViewController ()
+@interface AddViewController (){
+    LocationProvider *locationProvider;
+}
 
 @end
 
@@ -19,6 +22,7 @@
 Place *newPlace;
 - (void)viewDidLoad {
     [super viewDidLoad];
+    locationProvider = [[LocationProvider alloc] init];
     
 }
 
@@ -29,7 +33,7 @@ Place *newPlace;
 - (IBAction)onButtonTapSave:(id)sender {
     NSString* placeName = self.textFieldPlaceName.text;
     NSString* description = self.textFieldDescription.text;
-    NSString* location = self.textFieldLocation.text;
+    PFGeoPoint* location = locationProvider.parseGeopoint;
     NSData* imageToSave = UIImageJPEGRepresentation(self.imageView.image,0.5f);
     if (placeName==nil|| description==nil || location==nil || imageToSave==nil) {
         [Validator showMessageWithTitle:@"Missing data" andMessage:@"All fields required"];
@@ -90,6 +94,12 @@ Place *newPlace;
 
 -(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)takeLocation:(UIButton *)sender {
+    [locationProvider start];
+    self.textFieldLocation.text = locationProvider.locationString;
+
 }
 
 @end
