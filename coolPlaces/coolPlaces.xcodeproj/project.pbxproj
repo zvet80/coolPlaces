@@ -32,7 +32,6 @@
 		19FE8C211C64AC1900F7A995 /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 19FE8C201C64AC1900F7A995 /* CustomCollectionViewCell.m */; };
 		19FE8C271C64B90900F7A995 /* UserService.m in Sources */ = {isa = PBXBuildFile; fileRef = 19FE8C261C64B90900F7A995 /* UserService.m */; };
 		19FE8C2A1C64B92000F7A995 /* PlaceService.m in Sources */ = {isa = PBXBuildFile; fileRef = 19FE8C291C64B91F00F7A995 /* PlaceService.m */; };
-		19FE8C2D1C6546F800F7A995 /* ListWithPLaces.m in Sources */ = {isa = PBXBuildFile; fileRef = 19FE8C2C1C6546F800F7A995 /* ListWithPLaces.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,8 +75,6 @@
 		19FE8C261C64B90900F7A995 /* UserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserService.m; sourceTree = "<group>"; };
 		19FE8C281C64B91F00F7A995 /* PlaceService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceService.h; sourceTree = "<group>"; };
 		19FE8C291C64B91F00F7A995 /* PlaceService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceService.m; sourceTree = "<group>"; };
-		19FE8C2B1C6546F800F7A995 /* ListWithPLaces.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListWithPLaces.h; sourceTree = "<group>"; };
-		19FE8C2C1C6546F800F7A995 /* ListWithPLaces.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListWithPLaces.m; sourceTree = "<group>"; };
 		2CD44D540E6C4D9D3687FEFF /* Pods-coolPlaces.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coolPlaces.debug.xcconfig"; path = "Pods/Target Support Files/Pods-coolPlaces/Pods-coolPlaces.debug.xcconfig"; sourceTree = "<group>"; };
 		AA3B4F93675A9B17ED6BC040 /* Pods-coolPlaces.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coolPlaces.release.xcconfig"; path = "Pods/Target Support Files/Pods-coolPlaces/Pods-coolPlaces.release.xcconfig"; sourceTree = "<group>"; };
 		B8BCEB772A20BD85C429A74B /* libPods-coolPlaces.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-coolPlaces.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -194,8 +191,6 @@
 				19FE8C261C64B90900F7A995 /* UserService.m */,
 				19FE8C281C64B91F00F7A995 /* PlaceService.h */,
 				19FE8C291C64B91F00F7A995 /* PlaceService.m */,
-				19FE8C2B1C6546F800F7A995 /* ListWithPLaces.h */,
-				19FE8C2C1C6546F800F7A995 /* ListWithPLaces.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -365,7 +360,6 @@
 				19A8954A1C5F51CF00B0C10F /* AppDelegate.m in Sources */,
 				19A8955F1C5F53B900B0C10F /* AddViewController.m in Sources */,
 				19A895681C5F53F300B0C10F /* RegisterViewController.m in Sources */,
-				19FE8C2D1C6546F800F7A995 /* ListWithPLaces.m in Sources */,
 				19A8956F1C5F55FB00B0C10F /* Place.m in Sources */,
 				19A895471C5F51CF00B0C10F /* main.m in Sources */,
 				192BA7041C63D38B00D8242D /* Validator.m in Sources */,

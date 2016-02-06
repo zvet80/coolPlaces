@@ -9,8 +9,6 @@
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
 #include "Place.h"
-#import "ListWithPLaces.h"
-
 
 @interface AppDelegate ()
 
@@ -20,7 +18,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [ListWithPLaces seedPlaces];
+    
     [Parse enableLocalDatastore];
     
     // Initialize Parse.
@@ -28,28 +26,6 @@
                   clientKey:@"O5rraYoXeAqYEJpm2UtN2rZd5C7IRGktQBVyTWUU"];
     
     
-    // [Optional] Track statistics around application opens.
-    //[PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-    //placesLoadedfromDb = [[NSMutableArray alloc] init];
-    PFQuery *query = [PFQuery queryWithClassName:[Place parseClassName]];
-    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
-                [objects enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                    Place *place = obj;
-                    //NSLog(place.placeName);
-                    //[placesLoadedfromDb addObject:place];
-                   // NSLog([NSString stringWithFormat:@"%lu",(unsigned long)placesLoadedfromDb.count]);
-                }];
-//        return objects;
-//        [result addObjectsFromArray:objects];
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            [self.places addObjectsFromArray: objects];
-//            //self.places=[[NSMutableArray alloc]initWithArray:objects copyItems:YES];
-//        });
-        
-        //return result;
-    }];
-
-    //NSLog([NSString stringWithFormat:@"%lu",(unsigned long)placesLoadedfromDb.count]);
     return YES;
 }
 

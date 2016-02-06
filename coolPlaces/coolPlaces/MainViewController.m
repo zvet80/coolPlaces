@@ -15,12 +15,13 @@
 #import "CustomCollectionViewCell.h"
 #import "PlaceService.h"
 #import "AppDelegate.h"
-#import "ListWithPLaces.h"
 //#import "LaunchViewController.swift"
 //#import <coolPLaces/coolPlaces-Swift>
 
 @interface MainViewController (){
-    //NSMutableArray *places;
+    NSMutableArray *places;
+    CGFloat picSize;
+    CGFloat indent;
 }
 
 @property NSInteger slectedPlaceIndex;
@@ -31,59 +32,44 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    picSize = 150;
+    indent = 5;
+    places = [[NSMutableArray alloc] init];
+    PFQuery *query = [PFQuery queryWithClassName:[Place parseClassName]];
+    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+        [objects enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            Place *place = obj;
+            [places addObject:place];
+        }];
+        
+                dispatch_async(dispatch_get_main_queue(), ^{
+//                    [self.placesTableView reloadData];
+//                    [self.collectionLatest reloadData];
+                    
+                    [self.collectionLatest reloadData];
+                });
+    }];
     
-    //NSLog([NSString stringWithFormat:@"%lu",(unsigned long)placesLoadedfromDb.count]);
-
-    
-    //places = [[PlaceService alloc] getAllPlaces];
-    
-//    places = [[NSMutableArray alloc] init];
-//    PFQuery *query = [PFQuery queryWithClassName:[Place parseClassName]];
-//    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
-//        [objects enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-//            Place *place = obj;
-//            NSLog(place.placeName);
-//            [places addObject:place];
-//            NSLog([NSString stringWithFormat:@"%lu",(unsigned long)places.count]);
-//        }];
-//        [self.collectionCoolest setDataSource:self];
-//        [self.collectionCoolest setDelegate:self];
-//        
-//                dispatch_async(dispatch_get_main_queue(), ^{
-//                    [self.collectionCoolest reloadData];
-//                });
-//    }];
-//
-//    NSLog([NSString stringWithFormat:@"%lu",(unsigned long)places.count]);
-
     [self.collectionLatest setDataSource:self];
     [self.collectionLatest setDelegate:self];
-    
-    [self.placesTableView setDataSource:self];
-    [self.placesTableView setDelegate:self];
-
-}
-
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return places.count;
-}
-
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"tableCell"];
-    
-    if (cell==nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"tableCell"];
-    }
-    
-    cell.textLabel.text = [places[indexPath.row] placeName];
-    
-    return cell;
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return places.count;
+}
+
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
+    return 1;
+}
+
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    CGSize size = CGSizeMake(picSize, picSize);
+    return size;
+}
+
+-(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
+    return UIEdgeInsetsMake(indent, indent, indent, indent);
 }
 
 -(UICollectionViewCell*) collectionView: (UICollectionView*)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath{
@@ -93,16 +79,14 @@
     CustomCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
     
     if (cell==nil) {
-        cell = [[[NSBundle mainBundle] loadNibNamed:cellIdentifier owner:self options:nil] objectAtIndex:0];
+//        cell = [[[NSBundle mainBundle] loadNibNamed:cellIdentifier owner:self options:nil] objectAtIndex:0];
+        cell = [[CustomCollectionViewCell alloc] init];
     }
-    
     
     Place *place = [places objectAtIndex:indexPath.item];
     
-    cell.cellTitle.text = place.placeName;
-    
+    cell.smallLabel.text = place.placeName;
     PFFile *placeImage = place.image;
-    //UIImage *imageToShow;
     
     [placeImage getDataInBackgroundWithBlock:^(NSData * _Nullable data, NSError * _Nullable error) {
         UIImage *imageToShow = [UIImage imageWithData:data];
@@ -111,9 +95,8 @@
             imageToShow = [UIImage imageNamed:@"cliff"];
         }
         
-        cell.cellImageView.image = imageToShow;
+        cell.smallImage.image = imageToShow;
     }];
-    
     
     return cell;
 }

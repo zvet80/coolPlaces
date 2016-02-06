@@ -7,38 +7,32 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleAspectFit" id="iN0-l3-epB" customClass="CustomCollectionViewCell">
+        <view contentMode="scaleAspectFit" restorationIdentifier="customCollectionCell" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cXq-ue-2vi">
-                    <rect key="frame" x="0.0" y="157" width="231" height="42"/>
+                    <rect key="frame" x="0.0" y="157" width="231" height="37"/>
                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ndd-UB-zcr">
-                        <rect key="frame" x="0.0" y="0.0" width="231" height="42"/>
+                        <rect key="frame" x="0.0" y="0.0" width="231" height="37"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="NKv-Gd-Z1L">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="NKv-Gd-Z1L">
                                 <rect key="frame" x="0.0" y="0.0" width="231" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="NKv-Gd-Z1L" secondAttribute="bottom" id="aIx-bJ-KGq"/>
-                            <constraint firstAttribute="trailing" secondItem="NKv-Gd-Z1L" secondAttribute="trailing" id="cRu-yk-esr"/>
-                            <constraint firstItem="NKv-Gd-Z1L" firstAttribute="leading" secondItem="ndd-UB-zcr" secondAttribute="leading" id="eZ5-ie-76Z"/>
-                            <constraint firstItem="NKv-Gd-Z1L" firstAttribute="top" secondItem="ndd-UB-zcr" secondAttribute="top" id="ecg-CT-L9Y"/>
-                        </constraints>
                     </view>
                     <constraints>
-                        <constraint firstAttribute="height" constant="42" id="SDd-UW-dAc"/>
+                        <constraint firstAttribute="height" constant="37" id="SDd-UW-dAc"/>
                         <constraint firstAttribute="width" constant="231" id="UpK-nc-v17"/>
                     </constraints>
                     <blurEffect style="light"/>
                 </visualEffectView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cliff" translatesAutoresizingMaskIntoConstraints="NO" id="Gfb-Ua-w75">
-                    <rect key="frame" x="0.0" y="0.0" width="231" height="199"/>
+                    <rect key="frame" x="0.0" y="0.0" width="231" height="157"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -48,11 +42,8 @@
                 <constraint firstItem="cXq-ue-2vi" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="157" id="WBd-5k-bD2"/>
                 <constraint firstItem="Gfb-Ua-w75" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="dht-jb-eXP"/>
                 <constraint firstItem="Gfb-Ua-w75" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="hPy-Rt-5Xr"/>
-                <constraint firstItem="Gfb-Ua-w75" firstAttribute="bottom" secondItem="cXq-ue-2vi" secondAttribute="bottom" id="wh0-nT-UnR"/>
+                <constraint firstItem="Gfb-Ua-w75" firstAttribute="bottom" secondItem="cXq-ue-2vi" secondAttribute="bottom" constant="-37" id="wh0-nT-UnR"/>
             </constraints>
-            <connections>
-                <outlet property="cellImageView" destination="Gfb-Ua-w75" id="LRn-er-dfD"/>
-            </connections>
         </view>
     </objects>
     <resources>

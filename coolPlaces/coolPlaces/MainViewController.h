@@ -9,9 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Place.h"
 
-@interface MainViewController : UIViewController<UICollectionViewDelegate,UICollectionViewDataSource,UITableViewDataSource,UITableViewDelegate>
-
-//@property (weak, nonatomic) IBOutlet UICollectionView *collectionCoolest;
+@interface MainViewController : UIViewController<UICollectionViewDelegate,UICollectionViewDataSource,UITableViewDataSource,UITableViewDelegate,UICollectionViewDelegateFlowLayout>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionLatest;
 
@@ -20,8 +18,6 @@
 - (IBAction)logout:(UIBarButtonItem *)sender;
 
 - (IBAction)goToMapView:(UIButton *)sender;
-//@property (weak, nonatomic) IBOutlet UITableViewCell *cellImage;
-//@property (weak, nonatomic) IBOutlet UILabel *celllable;
 @property (weak, nonatomic) IBOutlet UITableView *placesTableView;
 
 @end
