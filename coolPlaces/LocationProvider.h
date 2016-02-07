@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <Parse/Parse.h>
+#import "coolPlaces/coolPlaces-Bridging-Header.h"
+#import <CoreLocation/CoreLocation.h>
 
 
 @interface LocationProvider : NSObject
@@ -15,6 +17,8 @@
 @property (strong, nonatomic) PFGeoPoint *parseGeopoint;
 
 @property (strong, nonatomic) NSString *locationString;
+
+@property (strong, nonatomic) CLLocation *clLocation;
 
 -(void) start;
 

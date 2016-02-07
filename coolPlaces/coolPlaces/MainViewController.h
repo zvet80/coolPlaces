@@ -9,16 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "Place.h"
 
-@interface MainViewController : UIViewController<UICollectionViewDelegate,UICollectionViewDataSource,UITableViewDataSource,UITableViewDelegate,UICollectionViewDelegateFlowLayout>
+@interface MainViewController : UIViewController<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionLatest;
 
-@property (weak, nonatomic) Place *addedPlace;
-
 - (IBAction)logout:(UIBarButtonItem *)sender;
 
-- (IBAction)goToMapView:(UIButton *)sender;
-@property (weak, nonatomic) IBOutlet UITableView *placesTableView;
+- (IBAction)startLocation:(UIButton *)sender;
 
 @end
 

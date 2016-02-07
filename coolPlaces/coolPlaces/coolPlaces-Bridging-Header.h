@@ -5,3 +5,6 @@
 #import "RegisterViewController.h"
 #import <Parse/Parse.h>
 #import "Validator.h"
+#import "Place.h"
+#import "LocationProvider.h"
+#import "DetailsviewController.h"

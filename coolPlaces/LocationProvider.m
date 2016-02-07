@@ -7,7 +7,7 @@
 //
 
 #import "LocationProvider.h"
-#import <CoreLocation/CoreLocation.h>
+
 
 @interface LocationProvider()<CLLocationManagerDelegate>
 
@@ -32,15 +32,16 @@
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations{
     CLLocation *location = [locations lastObject];
+    self.clLocation=location;
     CLGeocoder *coder = [[CLGeocoder alloc] init];
-    __weak id weakSelf = self;
+    //__weak id weakSelf = self;
     [coder reverseGeocodeLocation:location completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
         CLPlacemark *mark = [placemarks lastObject];
         NSLog(@"%@",mark.addressDictionary);
         PFGeoPoint *geopoint = [PFGeoPoint geoPointWithLatitude:location.coordinate.latitude longitude:location.coordinate.longitude];
         self.parseGeopoint=geopoint;
         
-        NSString *placeLocationString = [[mark.country stringByAppendingString:@", "] stringByAppendingString:mark.locality];
+        NSString *placeLocationString = mark.country;
         self.locationString = placeLocationString;
         
 //        

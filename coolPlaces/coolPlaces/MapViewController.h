@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "LocationProvider.h"
+#import <MapKit/MapKit.h>
 
-@interface MapViewController : UIViewController
+@interface MapViewController : UIViewController<MKMapViewDelegate>
 
-
-@property (weak, nonatomic) IBOutlet UITextField *textLongitude;
-@property (weak, nonatomic) IBOutlet UITextField *textLatitude;
+@property (strong, nonatomic) IBOutlet MKMapView *mapView;
+- (IBAction)changeMap:(UISegmentedControl *)sender;
 
 @end

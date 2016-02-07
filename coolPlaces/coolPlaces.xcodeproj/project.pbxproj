@@ -13,9 +13,6 @@
 		192BA7041C63D38B00D8242D /* Validator.m in Sources */ = {isa = PBXBuildFile; fileRef = 192BA7031C63D38B00D8242D /* Validator.m */; };
 		193775F31C664694005F6303 /* myCellCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 193775F11C664694005F6303 /* myCellCollectionViewCell.m */; };
 		193775F41C664694005F6303 /* myCellCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 193775F21C664694005F6303 /* myCellCollectionViewCell.xib */; };
-		193775FB1C665744005F6303 /* MainCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 193775F91C665744005F6303 /* MainCollectionViewController.m */; };
-		193775FC1C665744005F6303 /* MainCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 193775FA1C665744005F6303 /* MainCollectionViewController.xib */; };
-		193775FF1C6659D4005F6303 /* MainCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 193775FE1C6659D4005F6303 /* MainCollectionView.m */; };
 		193776021C667D24005F6303 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 193776011C667D24005F6303 /* MapViewController.m */; };
 		193776051C66927B005F6303 /* LocationProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 193776041C66927B005F6303 /* LocationProvider.m */; };
 		1937760B1C669E4B005F6303 /* Compass1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1937760A1C669E4B005F6303 /* Compass1.png */; };
@@ -30,14 +27,14 @@
 		19A895681C5F53F300B0C10F /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A895671C5F53F300B0C10F /* RegisterViewController.m */; };
 		19A8956C1C5F55E700B0C10F /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A8956B1C5F55E700B0C10F /* User.m */; };
 		19A8956F1C5F55FB00B0C10F /* Place.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A8956E1C5F55FB00B0C10F /* Place.m */; };
-		19A895741C5FDDA500B0C10F /* HttpData.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A895731C5FDDA500B0C10F /* HttpData.m */; };
+		19DF2FA41C674D3B002064D1 /* PlaceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF2FA31C674D3B002064D1 /* PlaceExtension.swift */; };
 		19E11FFF1C61047B009E272A /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E11FFE1C61047B009E272A /* LaunchView.swift */; };
 		19E120011C611121009E272A /* cliff.png in Resources */ = {isa = PBXBuildFile; fileRef = 19E120001C611121009E272A /* cliff.png */; };
 		19E22B6A1C6132F3009EDD7E /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 19E22B691C6132F3009EDD7E /* logo.png */; };
 		19E22B6C1C6139ED009EDD7E /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 19E22B6B1C6139ED009EDD7E /* background.png */; };
 		19E54A741C627B3600534E47 /* logo1.png in Resources */ = {isa = PBXBuildFile; fileRef = 19E54A731C627B3600534E47 /* logo1.png */; };
-		19FE8C1E1C64A8EF00F7A995 /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19FE8C1D1C64A8EF00F7A995 /* CustomCollectionViewCell.xib */; };
-		19FE8C211C64AC1900F7A995 /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 19FE8C201C64AC1900F7A995 /* CustomCollectionViewCell.m */; };
+		19E7021B1C671D610054F94D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19E7021A1C671D610054F94D /* MapKit.framework */; };
+		19E7021D1C6730180054F94D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E7021C1C6730180054F94D /* MapViewController.swift */; };
 		19FE8C271C64B90900F7A995 /* UserService.m in Sources */ = {isa = PBXBuildFile; fileRef = 19FE8C261C64B90900F7A995 /* UserService.m */; };
 		19FE8C2A1C64B92000F7A995 /* PlaceService.m in Sources */ = {isa = PBXBuildFile; fileRef = 19FE8C291C64B91F00F7A995 /* PlaceService.m */; };
 /* End PBXBuildFile section */
@@ -50,11 +47,6 @@
 		193775F01C664694005F6303 /* myCellCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myCellCollectionViewCell.h; sourceTree = "<group>"; };
 		193775F11C664694005F6303 /* myCellCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myCellCollectionViewCell.m; sourceTree = "<group>"; };
 		193775F21C664694005F6303 /* myCellCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = myCellCollectionViewCell.xib; sourceTree = "<group>"; };
-		193775F81C665744005F6303 /* MainCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCollectionViewController.h; sourceTree = "<group>"; };
-		193775F91C665744005F6303 /* MainCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainCollectionViewController.m; sourceTree = "<group>"; };
-		193775FA1C665744005F6303 /* MainCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainCollectionViewController.xib; sourceTree = "<group>"; };
-		193775FD1C6659D4005F6303 /* MainCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCollectionView.h; sourceTree = "<group>"; };
-		193775FE1C6659D4005F6303 /* MainCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainCollectionView.m; sourceTree = "<group>"; };
 		193776001C667D24005F6303 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		193776011C667D24005F6303 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		193776031C66927B005F6303 /* LocationProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationProvider.h; sourceTree = "<group>"; };
@@ -80,18 +72,15 @@
 		19A8956B1C5F55E700B0C10F /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		19A8956D1C5F55FB00B0C10F /* Place.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Place.h; sourceTree = "<group>"; };
 		19A8956E1C5F55FB00B0C10F /* Place.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Place.m; sourceTree = "<group>"; };
-		19A895701C5FD22000B0C10F /* Place_initWithDicts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Place_initWithDicts.h; sourceTree = "<group>"; };
-		19A895721C5FDDA500B0C10F /* HttpData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpData.h; sourceTree = "<group>"; };
-		19A895731C5FDDA500B0C10F /* HttpData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpData.m; sourceTree = "<group>"; };
+		19DF2FA31C674D3B002064D1 /* PlaceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceExtension.swift; sourceTree = "<group>"; };
 		19E11FFD1C61047A009E272A /* coolPlaces-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "coolPlaces-Bridging-Header.h"; sourceTree = "<group>"; };
 		19E11FFE1C61047B009E272A /* LaunchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		19E120001C611121009E272A /* cliff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cliff.png; sourceTree = "<group>"; };
 		19E22B691C6132F3009EDD7E /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		19E22B6B1C6139ED009EDD7E /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		19E54A731C627B3600534E47 /* logo1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo1.png; sourceTree = "<group>"; };
-		19FE8C1D1C64A8EF00F7A995 /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
-		19FE8C1F1C64AC1900F7A995 /* CustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewCell.h; sourceTree = "<group>"; };
-		19FE8C201C64AC1900F7A995 /* CustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewCell.m; sourceTree = "<group>"; };
+		19E7021A1C671D610054F94D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		19E7021C1C6730180054F94D /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		19FE8C251C64B90900F7A995 /* UserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserService.h; sourceTree = "<group>"; };
 		19FE8C261C64B90900F7A995 /* UserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserService.m; sourceTree = "<group>"; };
 		19FE8C281C64B91F00F7A995 /* PlaceService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceService.h; sourceTree = "<group>"; };
@@ -106,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19E7021B1C671D610054F94D /* MapKit.framework in Frameworks */,
 				019BD5132EC26F73E90D571D /* libPods-coolPlaces.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,6 +182,7 @@
 				19E11FFD1C61047A009E272A /* coolPlaces-Bridging-Header.h */,
 				193776001C667D24005F6303 /* MapViewController.h */,
 				193776011C667D24005F6303 /* MapViewController.m */,
+				19E7021C1C6730180054F94D /* MapViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -203,7 +194,6 @@
 				19A8956B1C5F55E700B0C10F /* User.m */,
 				19A8956D1C5F55FB00B0C10F /* Place.h */,
 				19A8956E1C5F55FB00B0C10F /* Place.m */,
-				19A895701C5FD22000B0C10F /* Place_initWithDicts.h */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -211,12 +201,11 @@
 		19A895711C5FDD6700B0C10F /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				19A895731C5FDDA500B0C10F /* HttpData.m */,
-				19A895721C5FDDA500B0C10F /* HttpData.h */,
 				19FE8C251C64B90900F7A995 /* UserService.h */,
 				19FE8C261C64B90900F7A995 /* UserService.m */,
 				19FE8C281C64B91F00F7A995 /* PlaceService.h */,
 				19FE8C291C64B91F00F7A995 /* PlaceService.m */,
+				19DF2FA31C674D3B002064D1 /* PlaceExtension.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -224,17 +213,9 @@
 		19E54A751C628A4F00534E47 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				19FE8C1D1C64A8EF00F7A995 /* CustomCollectionViewCell.xib */,
-				19FE8C1F1C64AC1900F7A995 /* CustomCollectionViewCell.h */,
-				19FE8C201C64AC1900F7A995 /* CustomCollectionViewCell.m */,
 				193775F01C664694005F6303 /* myCellCollectionViewCell.h */,
 				193775F11C664694005F6303 /* myCellCollectionViewCell.m */,
 				193775F21C664694005F6303 /* myCellCollectionViewCell.xib */,
-				193775F81C665744005F6303 /* MainCollectionViewController.h */,
-				193775F91C665744005F6303 /* MainCollectionViewController.m */,
-				193775FA1C665744005F6303 /* MainCollectionViewController.xib */,
-				193775FD1C6659D4005F6303 /* MainCollectionView.h */,
-				193775FE1C6659D4005F6303 /* MainCollectionView.m */,
 			);
 			name = Views;
 			path = ..;
@@ -243,6 +224,7 @@
 		7C411F2BE89D32A61FBCCACC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				19E7021A1C671D610054F94D /* MapKit.framework */,
 				B8BCEB772A20BD85C429A74B /* libPods-coolPlaces.a */,
 			);
 			name = Frameworks;
@@ -320,10 +302,8 @@
 				19E120011C611121009E272A /* cliff.png in Resources */,
 				19E22B6C1C6139ED009EDD7E /* background.png in Resources */,
 				1937760B1C669E4B005F6303 /* Compass1.png in Resources */,
-				193775FC1C665744005F6303 /* MainCollectionViewController.xib in Resources */,
 				193775F41C664694005F6303 /* myCellCollectionViewCell.xib in Resources */,
 				19E22B6A1C6132F3009EDD7E /* logo.png in Resources */,
-				19FE8C1E1C64A8EF00F7A995 /* CustomCollectionViewCell.xib in Resources */,
 				19A895551C5F51CF00B0C10F /* LaunchScreen.storyboard in Resources */,
 				19A895521C5F51CF00B0C10F /* Assets.xcassets in Resources */,
 				19A895501C5F51CF00B0C10F /* Main.storyboard in Resources */,
@@ -388,24 +368,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				193775FF1C6659D4005F6303 /* MainCollectionView.m in Sources */,
 				19A8956C1C5F55E700B0C10F /* User.m in Sources */,
 				19FE8C271C64B90900F7A995 /* UserService.m in Sources */,
+				19E7021D1C6730180054F94D /* MapViewController.swift in Sources */,
 				193776021C667D24005F6303 /* MapViewController.m in Sources */,
 				19E11FFF1C61047B009E272A /* LaunchView.swift in Sources */,
 				19A8954D1C5F51CF00B0C10F /* MainViewController.m in Sources */,
-				19FE8C211C64AC1900F7A995 /* CustomCollectionViewCell.m in Sources */,
-				193775FB1C665744005F6303 /* MainCollectionViewController.m in Sources */,
 				193775F31C664694005F6303 /* myCellCollectionViewCell.m in Sources */,
 				19A895621C5F53CC00B0C10F /* DetailsViewController.m in Sources */,
 				19A8954A1C5F51CF00B0C10F /* AppDelegate.m in Sources */,
 				19A8955F1C5F53B900B0C10F /* AddViewController.m in Sources */,
 				19A895681C5F53F300B0C10F /* RegisterViewController.m in Sources */,
 				19A8956F1C5F55FB00B0C10F /* Place.m in Sources */,
+				19DF2FA41C674D3B002064D1 /* PlaceExtension.swift in Sources */,
 				193776051C66927B005F6303 /* LocationProvider.m in Sources */,
 				19A895471C5F51CF00B0C10F /* main.m in Sources */,
 				192BA7041C63D38B00D8242D /* Validator.m in Sources */,
-				19A895741C5FDDA500B0C10F /* HttpData.m in Sources */,
 				19FE8C2A1C64B92000F7A995 /* PlaceService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

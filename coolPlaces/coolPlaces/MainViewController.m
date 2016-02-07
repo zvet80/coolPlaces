@@ -8,15 +8,13 @@
 
 #import "MainViewController.h"
 #import "Place.h"
-#import "Place_initWithDicts.h"
-#import "HttpData.h"
 #import <Parse/Parse.h>
 #import "AddViewController.h"
-#import "CustomCollectionViewCell.h"
 #import "myCellCollectionViewCell.h"
 #import "PlaceService.h"
 #import "AppDelegate.h"
 #import "DetailsViewController.h"
+#import "LocationProvider.h"
 //#import "LaunchViewController.swift"
 //#import <coolPLaces/coolPlaces-Swift>
 
@@ -35,10 +33,10 @@
     [super viewDidLoad];
     
     //places = [[NSMutableArray alloc] init];
-    if (self.addedPlace!=nil) {
-        //[places addObject:self.addedPlace];
-        NSLog(self.addedPlace.placeName);
-    }
+//    if (self.addedPlace!=nil) {
+//        //[places addObject:self.addedPlace];
+//        NSLog(self.addedPlace.placeName);
+//    }
 //    PFQuery *query = [PFQuery queryWithClassName:[Place parseClassName]];
 //    [query orderByDescending:@"createdAt"];
 //    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
@@ -178,13 +176,17 @@
 - (IBAction)logout:(UIBarButtonItem *)sender {
     [PFUser logOut];
     PFUser *currentUser = [PFUser currentUser];
+    currentUser = nil;
+}
+
+- (IBAction)startLocation:(UIButton *)sender {
+//    LocationProvider *locationProvider = [[LocationProvider alloc] init];
+//    [locationProvider start];
 }
 
 -(void) navigateToLaunch{
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+   // UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     //    LaunchView *launchVC = [storyboard instantiateViewControllerWithIdentifier:@"Launch"] as! UIViewController;
     //    [self presentViewController:launchVC animated:YES completion:nil];
-}
-- (IBAction)goToMapView:(UIButton *)sender {
 }
 @end
