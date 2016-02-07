@@ -13,6 +13,7 @@
 @interface MapViewController : UIViewController<MKMapViewDelegate>
 
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
+
 - (IBAction)changeMap:(UISegmentedControl *)sender;
 
 @end

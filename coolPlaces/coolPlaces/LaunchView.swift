@@ -16,8 +16,6 @@
     @IBOutlet weak var passwordTextView: UITextField!
     
     override func viewDidLoad(){
-
-        
     }
     
     @IBAction func loginTap(sender: UIButton) {

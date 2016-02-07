@@ -19,7 +19,7 @@ extern NSMutableArray* places;
 
 -(NSMutableArray*) getAllPlacesOrderedByDateDesc;
 
--(Place*) getPlaceWithId: (NSString*) placeId;
+//-(Place*) getPlaceWithId: (NSString*) placeId;
 
 -(void) savePlace: (Place*) place;
 

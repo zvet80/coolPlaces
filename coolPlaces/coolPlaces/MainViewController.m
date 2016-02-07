@@ -14,14 +14,12 @@
 #import "PlaceService.h"
 #import "AppDelegate.h"
 #import "DetailsViewController.h"
-#import "LocationProvider.h"
-//#import "LaunchViewController.swift"
+//#import "coolPlaces-Swift.h"
+//#import "LaunchView.swift"
+//#import "LaunchView.swift"
 //#import <coolPLaces/coolPlaces-Swift>
 
-@interface MainViewController (){
-   // NSMutableArray *places;
-    
-}
+@interface MainViewController ()
 
 @property NSInteger selectedPlaceIndex;
 
@@ -32,25 +30,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //places = [[NSMutableArray alloc] init];
-//    if (self.addedPlace!=nil) {
-//        //[places addObject:self.addedPlace];
-//        NSLog(self.addedPlace.placeName);
-//    }
-//    PFQuery *query = [PFQuery queryWithClassName:[Place parseClassName]];
-//    [query orderByDescending:@"createdAt"];
-//    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
-//        [objects enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-//            Place *place = obj;
-//            [places addObject:place];
-//        }];
-//        
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            [self.collectionLatest reloadData];
-//        });
-//    }];
-    
-    
     [self.collectionLatest reloadData];
     [self.collectionLatest layoutIfNeeded];
     [self.collectionLatest setDataSource:self];
@@ -58,21 +37,12 @@
 }
 
 -(void)viewDidAppear{
-    UIView *aview = [UIView new];
-    [self.collectionLatest addSubview:aview];
-    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+    
         [self.collectionLatest reloadItemsAtIndexPaths:@[@0]];
         [self.collectionLatest reloadSections:[NSIndexSet indexSetWithIndex:0]];
         [self.collectionLatest layoutIfNeeded];
         [self.collectionLatest reloadData];
-    }];
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self.collectionLatest reloadItemsAtIndexPaths:@[@0]];
-        [self.collectionLatest reloadSections:[NSIndexSet indexSetWithIndex:0]];
-        [self.collectionLatest layoutIfNeeded];
-        [self.collectionLatest reloadData];
-    });
-}
+    }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return places.count;
@@ -97,11 +67,8 @@
 -(UICollectionViewCell*) collectionView: (UICollectionView*)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath{
     UINib *nib =[UINib nibWithNibName:@"myCellCollectionViewCell" bundle:nil];
     [self.collectionLatest registerNib:nib forCellWithReuseIdentifier:@"mycell"];
-    //NSString *cellIdentifier = @"collectionCell";
-    NSString *cellIdentifier = @"mycell";
-
+        NSString *cellIdentifier = @"mycell";
     
-//    CustomCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
     myCellCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
     
     if (cell==nil) {
@@ -132,7 +99,7 @@
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didHighlightItemAtIndexPath:(NSIndexPath *)indexPath{
-    UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
+    //UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
     //cell.contentView.backgroundColor = [UIColor blueColor];
 }
 
@@ -158,6 +125,7 @@
         toVC.selectedPlace = placeToShow;
     }
 }
+
 -(IBAction)unwind:(UIStoryboardSegue*)sender{
     
 }
@@ -179,14 +147,9 @@
     currentUser = nil;
 }
 
-- (IBAction)startLocation:(UIButton *)sender {
-//    LocationProvider *locationProvider = [[LocationProvider alloc] init];
-//    [locationProvider start];
-}
-
 -(void) navigateToLaunch{
-   // UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    //    LaunchView *launchVC = [storyboard instantiateViewControllerWithIdentifier:@"Launch"] as! UIViewController;
-    //    [self presentViewController:launchVC animated:YES completion:nil];
+    //UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//    LaunchView *launchVC = [storyboard instantiateViewControllerWithIdentifier:@"Launch"] as UIViewController;
+//    [self presentViewController:launchVC animated:YES completion:nil];
 }
 @end

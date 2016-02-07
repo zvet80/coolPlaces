@@ -13,7 +13,6 @@
 		192BA7041C63D38B00D8242D /* Validator.m in Sources */ = {isa = PBXBuildFile; fileRef = 192BA7031C63D38B00D8242D /* Validator.m */; };
 		193775F31C664694005F6303 /* myCellCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 193775F11C664694005F6303 /* myCellCollectionViewCell.m */; };
 		193775F41C664694005F6303 /* myCellCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 193775F21C664694005F6303 /* myCellCollectionViewCell.xib */; };
-		193776021C667D24005F6303 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 193776011C667D24005F6303 /* MapViewController.m */; };
 		193776051C66927B005F6303 /* LocationProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 193776041C66927B005F6303 /* LocationProvider.m */; };
 		1937760B1C669E4B005F6303 /* Compass1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1937760A1C669E4B005F6303 /* Compass1.png */; };
 		19A895471C5F51CF00B0C10F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A895461C5F51CF00B0C10F /* main.m */; };
@@ -27,7 +26,6 @@
 		19A895681C5F53F300B0C10F /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A895671C5F53F300B0C10F /* RegisterViewController.m */; };
 		19A8956C1C5F55E700B0C10F /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A8956B1C5F55E700B0C10F /* User.m */; };
 		19A8956F1C5F55FB00B0C10F /* Place.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A8956E1C5F55FB00B0C10F /* Place.m */; };
-		19DF2FA41C674D3B002064D1 /* PlaceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF2FA31C674D3B002064D1 /* PlaceExtension.swift */; };
 		19E11FFF1C61047B009E272A /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E11FFE1C61047B009E272A /* LaunchView.swift */; };
 		19E120011C611121009E272A /* cliff.png in Resources */ = {isa = PBXBuildFile; fileRef = 19E120001C611121009E272A /* cliff.png */; };
 		19E22B6A1C6132F3009EDD7E /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 19E22B691C6132F3009EDD7E /* logo.png */; };
@@ -48,7 +46,6 @@
 		193775F11C664694005F6303 /* myCellCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myCellCollectionViewCell.m; sourceTree = "<group>"; };
 		193775F21C664694005F6303 /* myCellCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = myCellCollectionViewCell.xib; sourceTree = "<group>"; };
 		193776001C667D24005F6303 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
-		193776011C667D24005F6303 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		193776031C66927B005F6303 /* LocationProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationProvider.h; sourceTree = "<group>"; };
 		193776041C66927B005F6303 /* LocationProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationProvider.m; sourceTree = "<group>"; };
 		1937760A1C669E4B005F6303 /* Compass1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Compass1.png; sourceTree = "<group>"; };
@@ -72,7 +69,7 @@
 		19A8956B1C5F55E700B0C10F /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		19A8956D1C5F55FB00B0C10F /* Place.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Place.h; sourceTree = "<group>"; };
 		19A8956E1C5F55FB00B0C10F /* Place.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Place.m; sourceTree = "<group>"; };
-		19DF2FA31C674D3B002064D1 /* PlaceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceExtension.swift; sourceTree = "<group>"; };
+		19DF2FAD1C67FE18002064D1 /* coolPlaces-Swift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "coolPlaces-Swift.h"; sourceTree = "<group>"; };
 		19E11FFD1C61047A009E272A /* coolPlaces-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "coolPlaces-Bridging-Header.h"; sourceTree = "<group>"; };
 		19E11FFE1C61047B009E272A /* LaunchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		19E120001C611121009E272A /* cliff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cliff.png; sourceTree = "<group>"; };
@@ -181,8 +178,8 @@
 				19E11FFE1C61047B009E272A /* LaunchView.swift */,
 				19E11FFD1C61047A009E272A /* coolPlaces-Bridging-Header.h */,
 				193776001C667D24005F6303 /* MapViewController.h */,
-				193776011C667D24005F6303 /* MapViewController.m */,
 				19E7021C1C6730180054F94D /* MapViewController.swift */,
+				19DF2FAD1C67FE18002064D1 /* coolPlaces-Swift.h */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -205,7 +202,6 @@
 				19FE8C261C64B90900F7A995 /* UserService.m */,
 				19FE8C281C64B91F00F7A995 /* PlaceService.h */,
 				19FE8C291C64B91F00F7A995 /* PlaceService.m */,
-				19DF2FA31C674D3B002064D1 /* PlaceExtension.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -371,7 +367,6 @@
 				19A8956C1C5F55E700B0C10F /* User.m in Sources */,
 				19FE8C271C64B90900F7A995 /* UserService.m in Sources */,
 				19E7021D1C6730180054F94D /* MapViewController.swift in Sources */,
-				193776021C667D24005F6303 /* MapViewController.m in Sources */,
 				19E11FFF1C61047B009E272A /* LaunchView.swift in Sources */,
 				19A8954D1C5F51CF00B0C10F /* MainViewController.m in Sources */,
 				193775F31C664694005F6303 /* myCellCollectionViewCell.m in Sources */,
@@ -380,7 +375,6 @@
 				19A8955F1C5F53B900B0C10F /* AddViewController.m in Sources */,
 				19A895681C5F53F300B0C10F /* RegisterViewController.m in Sources */,
 				19A8956F1C5F55FB00B0C10F /* Place.m in Sources */,
-				19DF2FA41C674D3B002064D1 /* PlaceExtension.swift in Sources */,
 				193776051C66927B005F6303 /* LocationProvider.m in Sources */,
 				19A895471C5F51CF00B0C10F /* main.m in Sources */,
 				192BA7041C63D38B00D8242D /* Validator.m in Sources */,

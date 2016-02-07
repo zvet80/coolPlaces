@@ -14,10 +14,11 @@
 @interface RegisterViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
-@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
-@property (weak, nonatomic) IBOutlet UITextField *confirmTextField;
-- (IBAction)registerTab:(UIButton *)sender;
 
-//-(void)prova:(RegisterViewController*) registerViewController;
+@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+
+@property (weak, nonatomic) IBOutlet UITextField *confirmTextField;
+
+- (IBAction)registerTab:(UIButton *)sender;
 
 @end

@@ -11,10 +11,10 @@
 
 @interface UserService : NSObject
 
--(void) registerUserWithName: (NSString*) username andPassword:(NSString*) password;
+//-(void) registerUserWithName: (NSString*) username andPassword:(NSString*) password;
+//
+//-(void) loginUserWithName: (NSString*) username andPassword:(NSString*) password;
 
--(void) loginUserWithName: (NSString*) username andPassword:(NSString*) password;
-
--(PFUser*) getUserProfile:(PFUser*) currentUser;
+//-(PFUser*) getUserProfile:(PFUser*) currentUser;
 
 @end

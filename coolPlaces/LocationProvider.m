@@ -34,24 +34,18 @@
     CLLocation *location = [locations lastObject];
     self.clLocation=location;
     CLGeocoder *coder = [[CLGeocoder alloc] init];
-    //__weak id weakSelf = self;
+    
     [coder reverseGeocodeLocation:location completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
         CLPlacemark *mark = [placemarks lastObject];
-        NSLog(@"%@",mark.addressDictionary);
+        NSLog(@"objectivec %@",mark.addressDictionary);
         PFGeoPoint *geopoint = [PFGeoPoint geoPointWithLatitude:location.coordinate.latitude longitude:location.coordinate.longitude];
         self.parseGeopoint=geopoint;
         
         NSString *placeLocationString = mark.country;
-        self.locationString = placeLocationString;
-        
-//        
-//        [weakSelf textLatitude].text = [[NSNumber numberWithFloat:location.coordinate.latitude] stringValue];
-//        [weakSelf textLongitude].text=[[NSNumber numberWithFloat:location.coordinate.longitude] stringValue];
-    }];
+        self.locationString = placeLocationString;    }];
 }
 
 -(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
     NSLog(@"%@",error);
-    //[Validator showMessageWithTitle:@"Error" andMessage:[NSString stringWithFormat:@"error %@",error]];
 }
 @end

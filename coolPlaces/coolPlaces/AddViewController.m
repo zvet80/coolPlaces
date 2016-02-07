@@ -14,6 +14,8 @@
 
 @interface AddViewController (){
     LocationProvider *locationProvider;
+    UIProgressView *progressBar;
+    NSTimer *timer;
 }
 
 @end
@@ -22,8 +24,9 @@
 Place *newPlace;
 - (void)viewDidLoad {
     [super viewDidLoad];
-    locationProvider = [[LocationProvider alloc] init];
     
+    locationProvider = [[LocationProvider alloc] init];
+    [locationProvider start];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,23 +47,24 @@ Place *newPlace;
     PFFile *imageFile = [PFFile fileWithData:imageToSave];
     
     newPlace = [Place placeWithName:placeName description:description location:location image:imageFile ratings:nil andComments:nil];
+    
     [newPlace saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+        [PlaceService getAllPlaces];
+        
         dispatch_async(dispatch_get_main_queue(), ^{
             
-            
-        if (error) {
-            [Validator showMessageWithTitle:@"Failure" andMessage:@"Your coolPlace is saved!"];
-        }else{
-            [Validator showMessageWithTitle:@"Success" andMessage:@"Your coolPlace not saved!"];
-        }
-            [PlaceService getAllPlaces];
-             });
+            if (error) {
+                [Validator showMessageWithTitle:@"Failure" andMessage:@"Your coolPlace not saved!"];
+            }else{
+                [Validator showMessageWithTitle:@"Success" andMessage:@"Your coolPlace is saved!"];
+            }
+        });
     }];
     
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-
+    
 }
 
 - (IBAction)takePhoto:(UIButton *)sender;{
@@ -97,9 +101,7 @@ Place *newPlace;
 }
 
 - (IBAction)takeLocation:(UIButton *)sender {
-    [locationProvider start];
     self.textFieldLocation.text = locationProvider.locationString;
-
 }
 
 @end

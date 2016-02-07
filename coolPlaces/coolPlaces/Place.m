@@ -110,21 +110,4 @@
 //    _comments = comments;
 //}
 
-
-//+(Place*) placeWithDict: (NSDictionary*) dict{
-//    return [Place placeWithName: [dict objectForKey:@"name"]
-//                 andDescription:[dict objectForKey:@"description"]];
-//}
-//
-//-(NSData*) toNSData{
-//    NSDictionary *dict = @{
-//                           @"name":self.placeName,
-//                           @"description":self.description
-//                           };
-//    
-//    return [NSJSONSerialization dataWithJSONObject:dict
-//                                           options:NSJSONWritingPrettyPrinted
-//                                             error:nil];
-//}
-
 @end

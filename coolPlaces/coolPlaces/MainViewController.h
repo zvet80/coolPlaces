@@ -15,7 +15,5 @@
 
 - (IBAction)logout:(UIBarButtonItem *)sender;
 
-- (IBAction)startLocation:(UIButton *)sender;
-
 @end
 

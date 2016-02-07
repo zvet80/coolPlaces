@@ -18,7 +18,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     let annotation = MKPointAnnotation()
     var locationManager = CLLocationManager()
     var userLocationParse = PFGeoPoint(latitude: 0, longitude: 0);
-    //    var annotations:[MKAnnotaion] {get}
     
     
     override func viewDidLoad() {
@@ -66,7 +65,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations.last
         let center = CLLocationCoordinate2D(latitude: (location?.coordinate.latitude)!, longitude: (location?.coordinate.longitude)!)
-        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta:2,longitudeDelta: 2))
+        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta:3,longitudeDelta: 3))
         self.mapView.setRegion(region, animated: true)
         //self.locationManager.stopUpdatingLocation()
         
@@ -83,7 +82,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
-        print("Error:" + error.localizedDescription)
+        print("Error swift:" + error.localizedDescription)
     }
     
     func clearAnnotations(){
@@ -129,8 +128,16 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         }
     }
     
-    //    func mapView(sender:MKMapView,annotationView:MKAnnotationView,calloutAccessaryControlTapped:UIControl){
-    //
-    //    }
-    
+    @IBAction func changeMapType(sender: UISegmentedControl) {
+        
+        switch sender.selectedSegmentIndex {
+        case 0:
+            self.mapView.mapType = MKMapType.Standard
+        case 1:
+            self.mapView.mapType = MKMapType.Satellite
+        case 2:
+            self.mapView.mapType = MKMapType.Hybrid
+        default: self.mapView.mapType = MKMapType.Standard
+        }
+    }    
 }
