@@ -45,7 +45,6 @@
 		193775F01C664694005F6303 /* myCellCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myCellCollectionViewCell.h; sourceTree = "<group>"; };
 		193775F11C664694005F6303 /* myCellCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myCellCollectionViewCell.m; sourceTree = "<group>"; };
 		193775F21C664694005F6303 /* myCellCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = myCellCollectionViewCell.xib; sourceTree = "<group>"; };
-		193776001C667D24005F6303 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		193776031C66927B005F6303 /* LocationProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationProvider.h; sourceTree = "<group>"; };
 		193776041C66927B005F6303 /* LocationProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationProvider.m; sourceTree = "<group>"; };
 		1937760A1C669E4B005F6303 /* Compass1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Compass1.png; sourceTree = "<group>"; };
@@ -177,7 +176,6 @@
 				19A895671C5F53F300B0C10F /* RegisterViewController.m */,
 				19E11FFE1C61047B009E272A /* LaunchView.swift */,
 				19E11FFD1C61047A009E272A /* coolPlaces-Bridging-Header.h */,
-				193776001C667D24005F6303 /* MapViewController.h */,
 				19E7021C1C6730180054F94D /* MapViewController.swift */,
 				19DF2FAD1C67FE18002064D1 /* coolPlaces-Swift.h */,
 			);

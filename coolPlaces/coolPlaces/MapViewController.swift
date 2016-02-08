@@ -10,14 +10,18 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate{
+class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIGestureRecognizerDelegate{
     
     let AnnotationViewReuseIdentifier = "place"
     @IBOutlet weak var mapView: MKMapView!
     
+    
     let annotation = MKPointAnnotation()
     var locationManager = CLLocationManager()
     var userLocationParse = PFGeoPoint(latitude: 0, longitude: 0);
+    var lastRotation = CGFloat()
+    let pinchRec = UIPinchGestureRecognizer()
+    let rotateRec = UIRotationGestureRecognizer()
     
     
     override func viewDidLoad() {
@@ -30,6 +34,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         self.mapView.showsUserLocation = true
         displayMarkers()
+        self.mapView.userInteractionEnabled = true
+        self.mapView.multipleTouchEnabled = true
         
     }
     
@@ -139,5 +145,35 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             self.mapView.mapType = MKMapType.Hybrid
         default: self.mapView.mapType = MKMapType.Standard
         }
-    }    
+    }
+    @IBAction func pinch(sender: UIPinchGestureRecognizer) {
+        if let view = sender.view{
+            view.transform = CGAffineTransformScale(view.transform, sender.scale, sender.scale)
+            sender.scale = 1
+        }
+    }
+    
+    @IBAction func rotate(sender: UIRotationGestureRecognizer) {
+       // CGFloat angle = sender.rotation
+//        if let view = sender.view{
+//            view.transform = CGAffineTransformRotate(view.transform, sender.rotation)
+//            sender.rotation = 0
+//        }
+        
+        var lastRotation = CGFloat()
+        self.view.bringSubviewToFront(self.mapView)
+        if(sender.state == UIGestureRecognizerState.Ended){
+            lastRotation = 0.0
+        }
+        
+        let rotation = 0.0 - (lastRotation - sender.rotation)
+        let currentTrans = sender.view?.transform
+        let newTrans = CGAffineTransformRotate(currentTrans!, rotation)
+        sender.view?.transform = newTrans
+        lastRotation = sender.rotation
+    }
+    
+    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
 }
